@@ -1,0 +1,282 @@
+:root {
+    --primary-teal: #1F6F82;
+    --accent-green: #9FBF2A;
+    --dark-bg: #0F1720;
+    --light-bg: #F7F9FB;
+    --text-dark: #1A1A1A;
+    --text-light: #FFFFFF;
+    --text-muted: #5F6B7A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* CONTAINER - MAX WIDTH 1100px */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* IMPROVED SECTION SPACING */
+
+.section {
+    padding: 50px 0; 
+}
+
+/* BACKGROUND UTILITIES */
+.light-bg {
+    background-color: var(--light-bg);
+}
+
+.white-bg {
+    background-color: #FFFFFF;
+}
+
+/* HEADINGS */
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+/* MUTED PARAGRAPH */
+
+p {
+    color: var(--text-muted);
+}
+
+
+/* HERO SECTION */
+
+
+.hero {
+    background-color: var(--dark-bg);
+    background-image: url("../images/gf3.png");
+    color: var(--text-light);
+    text-align: center;
+    padding: 80px 0 50px 0; 
+}
+
+/* ===== NAVBAR FOR TOP LEFT LOGO ===== */
+
+.navbar{
+    position: absolute;
+    top: 0;
+    margin-top: -60px;
+    left: 0;
+    width: 100%;
+    padding: 0px 0px; 
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.logo{
+    width: 140px; 
+    height: auto;
+}
+
+/* HERO TEXT */
+
+.hero h1 {
+    color: var(--text-light);
+    font-size: 2.6rem;
+    margin-top: 30px;
+}
+
+.hero-subtext {
+    margin: 20px auto 40px auto;
+    max-width: 650px; 
+    color: #e8f3ff;
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: #FFFFFF;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* SERVICES SECTION */
+
+/* ===== NEW SERVICE CARD LAYOUT ===== */
+
+.service-card{
+    text-align:center;
+}
+
+/* ===== RESPONSIVE SERVICE IMAGE ===== */
+
+.service-img{
+    width:100%;
+    max-width:320px;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+/* SERVICE TITLE COLOR */
+
+.service-title {
+    color: var(--primary-teal);
+}
+
+
+/* GRID LAYOUT (MOBILE FIRST) */
+
+.grid-3 {
+    display: grid;
+    gap: 40px;
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap:50px; 
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+}
+
+/* ABOUT SECTION */
+
+.about-text {
+    max-width: 700px;
+    /* margin-bottom: 20px; */
+}
+
+
+/* FINAL CTA */
+
+.final-cta {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: center;
+    padding: 60px 0 0 0; 
+}
+
+.final-cta p {
+    color: #C5CDD6;
+    margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    /* padding: 60px 0;  */
+}
+
+/* ===== FOOTER LAYOUT ===== */
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ===== FOOTER BRAND ===== */
+
+.footer-brand{
+    text-align: center;
+    margin-bottom: 10px;
+    /* margin-left: -60px; */
+}
+
+/* ===== FOOTER LOGO ===== */
+
+.footer-logo{
+    width:130px;
+    margin-bottom: -40px;
+    /* margin-left: -12px; */
+}
+
+/* ===== CONTACT SECTION ===== */
+
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    align-items:center;
+}
+
+/* ===== CONTACT ITEM ===== */
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:white;
+}
+
+/* ===== LARGE PROFESSIONAL ICON SIZE ===== */
+
+.footer-icon{
+    width:28px; 
+    height:28px;
+}
+
+
+/* ===== DESKTOP FOOTER ===== */
+
+@media (min-width:768px){
+
+.footer-content{
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+}
+
+.footer-brand{
+text-align:left;
+}
+
+.footer-contact{
+flex-direction:row;
+}
+
+}
